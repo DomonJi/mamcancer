@@ -44,5 +44,6 @@ $(function(){
             $video.width = $stage.height();
             $video.height = $stage.width();
         }
+        $('.video').on('ended',handler.onVideoEnd);
     }());
 });
