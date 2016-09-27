@@ -74,7 +74,7 @@
 	    setTimeout(function () {
 	      window.location.href = "http://woman.disoul.me";
 	      document.getElementById('btn').style.opacity = 1;
-	    }, 1500);
+	    }, 750);
 	  });
 	  video.addEventListener('timeupdate', function (e) {
 	    if (e.target.currentTime > 51) {
