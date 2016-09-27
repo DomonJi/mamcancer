@@ -68,7 +68,7 @@
 	    setInterval(function () {
 	      audio.volume -= 0.06;
 	    }, 100);
-	  }, 48000);
+	  }, 47000);
 	  video.addEventListener('ended', function (e) {
 
 	    setTimeout(function () {
