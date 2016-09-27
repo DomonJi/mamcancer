@@ -63,10 +63,13 @@
 	  setTimeout(function () {
 	    scaleToFill(video);
 	  }, 100);
+	  setTimeout(function () {
+	    scaleToFill(video);
+	  }, 1000);
 	  video.play();
 	  setTimeout(function () {
 	    setInterval(function () {
-	      audio.volume -= 0.06;
+	      if (audio.volume > 0.06) audio.volume -= 0.03;
 	    }, 100);
 	  }, 47000);
 	  video.addEventListener('ended', function (e) {
