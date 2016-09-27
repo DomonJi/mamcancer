@@ -57,7 +57,7 @@
 	  document.body.style.display = 'block';
 	  var video = document.getElementById('video');
 	  var audio = document.getElementById('audio');
-	  // video.controls = false;
+	  video.controls = false;
 	  var w = width / 640.0;
 	  var h = height / 1045.0;
 	  setTimeout(function () {
