@@ -60,18 +60,12 @@
 	  video.controls = false;
 	  var w = width / 640.0;
 	  var h = height / 1045.0;
-	  setTimeout(function () {
-	    scaleToFill(video);
-	  }, 100);
-	  setTimeout(function () {
-	    scaleToFill(video);
-	  }, 1000);
-	  video.play();
+	  // video.play();
 	  setTimeout(function () {
 	    setInterval(function () {
-	      if (audio.volume > 0.06) audio.volume -= 0.03;
+	      if (audio.volume > 0.06) audio.volume -= 0.02;
 	    }, 100);
-	  }, 47000);
+	  }, 46000);
 	  video.addEventListener('ended', function (e) {
 
 	    setTimeout(function () {
@@ -86,8 +80,11 @@
 	  });
 	};
 	var video = document.getElementById('video');
+	var audio = document.getElementById('audio');
 	video.addEventListener('canplay', function (e) {
+	  scaleToFill(video);
 	  e.target.play();
+	  audio.play();
 	});
 
 	function check() {
@@ -10370,7 +10367,7 @@
 
 
 	// module
-	exports.push([module.id, "/*\n * index.css\n * Copyright (C) 2016 disoul\n *\n */\n\n* {\n    box-sizing: border-box;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    -webkit-touch-callout: none;\n    margin: 0;\n    padding: 0;\n}\n\nbody {\n    height: 100vh;\n    overflow: hidden;\n    position: relative;\n}\n\n#main {\n    position: absolute;\n    top: 0;\n    left: calc(50% - 320px);\n}\n\n.btn {\n    background-image: url(" + __webpack_require__(5) + ");\n    background-repeat: no-repeat;\n    -webkit-transition: opacity ease 1s;\n    transition: opacity ease 1s;\n    position: absolute;\n    bottom: 1.5rem;\n    left: 1rem;\n    width: 3rem;\n    height: 1rem;\n    background-size: 100% 100%;\n    cursor: pointer;\n    z-index: 100;\n}\n\n.music {\n    width: 0.8rem;\n    height: 0.8rem;\n    background-image: url(" + __webpack_require__(6) + ");\n    background-size: cover;\n    position: absolute;\n    top: 0.7rem;\n    left: 0.7rem;\n    z-index: 100;\n}\n\n.music.close {\n    background-image: url(" + __webpack_require__(7) + ");\n}\n\n#app {}\n\n#video {\n    position: absolute;\n    width: 101%;\n    height: 100%;\n}\n\n\n/*\nvideo::-webkit-media-controls {\n    display: none !important;\n}*/\n", ""]);
+	exports.push([module.id, "/*\n * index.css\n * Copyright (C) 2016 disoul\n *\n */\n\n* {\n    box-sizing: border-box;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    -webkit-touch-callout: none;\n    margin: 0;\n    padding: 0;\n}\n\nbody {\n    height: 100vh;\n    overflow: hidden;\n    position: relative;\n}\n\n#main {\n    position: absolute;\n    top: 0;\n    left: calc(50% - 320px);\n}\n\n.btn {\n    background-image: url(" + __webpack_require__(5) + ");\n    background-repeat: no-repeat;\n    -webkit-transition: opacity ease 1s;\n    transition: opacity ease 1s;\n    position: absolute;\n    bottom: 1.5rem;\n    left: 1rem;\n    width: 3rem;\n    height: 1rem;\n    background-size: 100% 100%;\n    cursor: pointer;\n    z-index: 100;\n}\n\n.music {\n    width: 0.8rem;\n    height: 0.8rem;\n    background-image: url(" + __webpack_require__(6) + ");\n    background-size: cover;\n    position: absolute;\n    top: 0.7rem;\n    left: 0.7rem;\n    z-index: 100;\n}\n\n.music.close {\n    background-image: url(" + __webpack_require__(7) + ");\n}\n\n#app {}\n\n#video {\n    position: absolute;\n    width: 102%;\n    height: 100%;\n}\n\n\n/*\nvideo::-webkit-media-controls {\n    display: none !important;\n}*/\n", ""]);
 
 	// exports
 
