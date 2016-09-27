@@ -80,7 +80,7 @@
 	};
 	var video = document.getElementById('video');
 	var audio = document.getElementById('audio');
-	video.addEventListener('canplaythrough', function (e) {
+	video.addEventListener('canplay', function (e) {
 	  scaleToFill(video);
 	  e.target.play();
 	  audio.play();
