@@ -1,0 +1,66 @@
+/*
+ * index.css
+ * Copyright (C) 2016 disoul
+ *
+ */
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-touch-callout: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#main {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 320px);
+}
+
+.btn {
+    background-image: url('../assets/btn.png');
+    background-repeat: no-repeat;
+    transition: opacity ease 1s;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1rem;
+    width: 3rem;
+    height: 1rem;
+    background-size: 100% 100%;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.music {
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: url('../assets/music.png');
+    background-size: cover;
+    position: absolute;
+    top: 0.7rem;
+    left: 0.7rem;
+    z-index: 100;
+}
+
+.music.close {
+    background-image: url('../assets/music2.png');
+}
+
+#app {}
+
+#video {
+    position: absolute;
+    width: 101%;
+    height: 100%;
+}
+
+video::-webkit-media-controls {
+    display: none !important;
+}
