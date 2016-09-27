@@ -66,7 +66,6 @@
 	    }, 100);
 	  }, 46000);
 	  video.addEventListener('ended', function (e) {
-
 	    setTimeout(function () {
 	      window.location.href = "http://woman.disoul.me";
 	      document.getElementById('btn').style.opacity = 1;
@@ -77,12 +76,9 @@
 	      window.location.href = "http://woman.disoul.me";
 	    }
 	  });
-	  video.addEventListener('canplay', function (e) {
-	    scaleToFill(video);
-	    video.play();
-	    audio.play();
-	    console.log('canplay!');
-	  });
+	  scaleToFill(video);
+	  video.play();
+	  audio.play();
 	};
 
 	function check() {
