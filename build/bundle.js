@@ -77,14 +77,13 @@
 	      window.location.href = "http://woman.disoul.me";
 	    }
 	  });
+	  video.addEventListener('canplay', function (e) {
+	    scaleToFill(video);
+	    video.play();
+	    audio.play();
+	    console.log('canplay!');
+	  });
 	};
-	var video = document.getElementById('video');
-	var audio = document.getElementById('audio');
-	video.addEventListener('canplay', function (e) {
-	  scaleToFill(video);
-	  e.target.play();
-	  audio.play();
-	});
 
 	function check() {
 	  if (video.currentTime >= 52) {
