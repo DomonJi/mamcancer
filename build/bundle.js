@@ -64,10 +64,13 @@
 	    scaleToFill(video);
 	  }, 100);
 	  video.play();
-	  video.addEventListener('ended', function (e) {
+	  setTimeout(function () {
 	    setInterval(function () {
-	      audio.volume -= 0.1;
-	    }, 150);
+	      audio.volume -= 0.03;
+	    }, 100);
+	  }, 48000);
+	  video.addEventListener('ended', function (e) {
+
 	    setTimeout(function () {
 	      window.location.href = "http://woman.disoul.me";
 	      document.getElementById('btn').style.opacity = 1;
