@@ -1,0 +1,15 @@
+/node_modules
+/bower_components
+
+# Vim
+# swap
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+# session
+Session.vim
+# temporary
+.netrwhist
+*~
+
+/build
+*.log

@@ -2,26 +2,18 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
-    <title>新能源</title>
-    <link rel="stylesheet" href="/css/normalize.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="/css/style.css" media="screen" title="no title" charset="utf-8">
-    <script async src="js/jquery-3.1.0.slim.min.js" charset="utf-8"></script>
-    <script async src="js/main.js" charset="utf-8"></script>
+    <meta charset="utf-8" />
+    <title>Index</title>
+    <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0" name="viewport" />
 </head>
 
 <body>
-    <div class="stage">
-        <div class="video_player">
-            <video class="video" src="" autoplay poster="">
-
-            </video>
-        </div>
+    <div id="app">
+        <div id="btn" class="btn" style="opacity: 0"></div>
+        <audio id="audio" src="./assets/bg2.mp3" loop></audio>
+        <video id="video" src="./assets/source.mp4" poster="./assets/loading.jpg" webkit-playsinline>Not support</video>
     </div>
-    <div class="audio_player" style="display:none">
-        <audio src="" class="audio" preload></audio>
-    </div>
+    <script src="./build/bundle.js"></script>
 </body>
 
 </html>
