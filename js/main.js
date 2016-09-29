@@ -11,6 +11,7 @@ window.onload = function() {
   var audio = document.getElementById('audio');
   var w = width / 640.0;
   var h = height / 1045.0;
+  let $img = $('.img');
   // video.play();
   setTimeout(function() {
     setInterval(function() {
@@ -21,13 +22,15 @@ window.onload = function() {
   }, 46000);
   video.addEventListener('ended', function(e) {
     setTimeout(function() {
-      window.location.href = "http://woman.disoul.me";
+      $img.show();
+      // window.location.href = "http://woman.disoul.me";
       document.getElementById('btn').style.opacity = 1;
     }, 750);
   });
   video.addEventListener('timeupdate', function(e) {
     if (e.target.currentTime > 51) {
-      window.location.href = "http://woman.disoul.me";
+      // window.location.href = "http://woman.disoul.me";
+      $img.show();
     }
   });
   scaleToFill(video);
@@ -37,7 +40,7 @@ window.onload = function() {
 
 function check() {
   if (video.currentTime >= 52) {
-    window.location.href = "http://woman.disoul.me";
+    // window.location.href = "http://woman.disoul.me";
   }
   requestAnimationFrame(check);
 }

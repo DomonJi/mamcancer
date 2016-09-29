@@ -24,6 +24,8 @@ body {
     left: calc(50% - 320px);
 }
 
+
+/*
 .btn {
     background-image: url('../assets/btn.png');
     background-repeat: no-repeat;
@@ -36,7 +38,7 @@ body {
     background-size: 100% 100%;
     cursor: pointer;
     z-index: 100;
-}
+}*/
 
 .music {
     width: 0.8rem;
@@ -61,8 +63,26 @@ body {
     height: 100%;
 }
 
+.img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('../assets/sbg.jpg');
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    display: none;
+}
 
-/*
-video::-webkit-media-controls {
-    display: none !important;
-}*/
+#btn {
+    /*text-align: center;*/
+}
+
+#btn img {
+    display: block;
+    width: 25%;
+    margin: auto auto;
+    cursor: pointer;
+    z-index: 10;
+    margin-top: 90%;
+}
