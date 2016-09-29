@@ -9,9 +9,10 @@ window.onload = function() {
   document.body.style.display = 'block';
   var video = document.getElementById('video');
   var audio = document.getElementById('audio');
+  let $video = $('#video')
   var w = width / 640.0;
   var h = height / 1045.0;
-  let $img = $('.img');
+  let $img = $('.img')
   // video.play();
   setTimeout(function() {
     setInterval(function() {
@@ -22,7 +23,8 @@ window.onload = function() {
   }, 46000);
   video.addEventListener('ended', function(e) {
     setTimeout(function() {
-      $img.show();
+      $img.show()
+      $video.hidden()
       // window.location.href = "http://woman.disoul.me";
       document.getElementById('btn').style.opacity = 1;
     }, 750);
@@ -30,7 +32,8 @@ window.onload = function() {
   video.addEventListener('timeupdate', function(e) {
     if (e.target.currentTime > 51) {
       // window.location.href = "http://woman.disoul.me";
-      $img.show();
+      $img.show()
+      $video.hidden()
     }
   });
   scaleToFill(video);
