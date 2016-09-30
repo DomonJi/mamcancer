@@ -57,29 +57,29 @@
 	  document.body.style.display = 'block';
 	  var video = document.getElementById('video');
 	  var audio = document.getElementById('audio');
-	  var $video = $('#video');
 	  var w = width / 640.0;
 	  var h = height / 1045.0;
 	  var $img = $('.img');
+	  var $video = $('#video');
 	  // video.play();
 	  setTimeout(function () {
 	    setInterval(function () {
 	      if (audio.volume > 0.06) audio.volume -= 0.02;
 	    }, 100);
-	  }, 46000);
+	  }, 34000);
 	  video.addEventListener('ended', function (e) {
 	    setTimeout(function () {
 	      $img.show();
-	      $video.hidden();
+	      $video.remove();
 	      // window.location.href = "http://woman.disoul.me";
 	      document.getElementById('btn').style.opacity = 1;
 	    }, 750);
 	  });
 	  video.addEventListener('timeupdate', function (e) {
-	    if (e.target.currentTime > 51) {
+	    if (e.target.currentTime > 40) {
 	      // window.location.href = "http://woman.disoul.me";
 	      $img.show();
-	      $video.hidden();
+	      $video.remove();
 	    }
 	  });
 	  scaleToFill(video);
@@ -88,7 +88,7 @@
 	};
 
 	function check() {
-	  if (video.currentTime >= 52) {
+	  if (video.currentTime >= 41) {
 	    // window.location.href = "http://woman.disoul.me";
 	  }
 	  requestAnimationFrame(check);
