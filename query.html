@@ -14,7 +14,6 @@
 </style>
 
 <body>
-    <audio id="audio" src="./assets/bg2.mp3" autoplay loop></audio>
     <div id="app">
         <div v-show="share" class="share" v-on:click="cancelshare()" transition="fade">
             <div class="arrow">
@@ -95,6 +94,7 @@
             </div>
         </div>
     </div>
+    <audio id="audio" src="./assets/bg2.mp3" autoplay loop></audio>
     <script src="./js/jquery-3.1.0.slim.min.js"></script>
     <script src="./bower_components/drumjs/lib/drum.min.js"></script>
     <script src="./bower_components/drumjs/contrib/hammerjs/hammer.min.js"></script>
