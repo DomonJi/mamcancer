@@ -15,7 +15,7 @@
 
 <body>
     <div id="app">
-        <div v-show="share" class="share" v-on:click="cancelshare()" transition="fade">
+        <div v-if="share" class="share" v-on:click="cancelshare()" transition="fade">
             <div class="arrow">
                 <img src="./assets/arrow.png">
             </div>
