@@ -15,7 +15,7 @@
 
 <body>
     <div id="app">
-        <div v-if="share" class="share" v-on:click="cancelshare()" transition="fade">
+        <div v-show="share" class="share" v-on:click="cancelshare()" transition="fade">
             <div class="arrow">
                 <img src="./assets/arrow.png">
             </div>
@@ -60,8 +60,8 @@
                     </div>
                 </div>
                 <div class="finish__buttons">
-                    <button v-on:click="redo()">再测一次</button>
-                    <button v-on:click="sharee()">分享关爱</button>
+                    <button id="button1" v-on:click="redo()">再测一次</button>
+                    <button id="button2" v-on:click="sharee()">分享关爱</button>
                 </div>
             </div>
             <div class="main" v-else>
