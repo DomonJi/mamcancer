@@ -84,7 +84,7 @@
 	        }
 	    });
 	    scaleToFill(video);
-	    audio.play();
+	    // audio.play();
 	    video.play();
 	};
 
