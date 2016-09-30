@@ -61,6 +61,11 @@
 	    var w = width / 640.0;
 	    var h = height / 1045.0;
 	    var $img = $('.img');
+	    var ua = navigator.userAgent.toLowerCase();
+	    if (/iphone|ipad|ipod/.test(ua)) {
+	        $video.attr('src', '../assets/source3.mp4');
+	        audio.play();
+	    } else {}
 	    // video.play();
 	    // setTimeout(function() {
 	    //     setInterval(function() {
@@ -72,6 +77,9 @@
 	        setTimeout(function () {
 	            $img.show();
 	            $video.remove();
+	            if (/iphone|ipad|ipod/.test(ua)) {} else {
+	                audio.play();
+	            }
 	            // window.location.href = "http://woman.disoul.me";
 	            document.getElementById('btn').style.opacity = 1;
 	        }, 750);
@@ -84,7 +92,6 @@
 	        }
 	    });
 	    scaleToFill(video);
-	    // audio.play();
 	    video.play();
 	};
 
