@@ -52,7 +52,9 @@
 	var $ = __webpack_require__(1);
 	// require('./rem.js');
 	__webpack_require__(2);
-
+	if (/iphone|ipad|ipod/.test(ua)) {
+	    $video.attr('src', '../assets/source3.mp4');
+	} else {}
 	window.onload = function () {
 	    document.body.style.display = 'block';
 	    var video = document.getElementById('video');
@@ -93,9 +95,10 @@
 	        }
 	    });
 	    scaleToFill(video);
-	    if (/iphone|ipad|ipod/.test(ua)) {} else {
-	        video.play();
+	    if (/iphone|ipad|ipod/.test(ua)) {
+	        audio.play();
 	    }
+	    video.play();
 	};
 
 	function check() {
