@@ -54,55 +54,56 @@
 	__webpack_require__(2);
 
 	window.onload = function () {
-	  document.body.style.display = 'block';
-	  var video = document.getElementById('video');
-	  var audio = document.getElementById('audio');
-	  var w = width / 640.0;
-	  var h = height / 1045.0;
-	  var $img = $('.img');
-	  var $video = $('#video');
-	  // video.play();
-	  setTimeout(function () {
-	    setInterval(function () {
-	      if (audio.volume > 0.06) audio.volume -= 0.02;
-	    }, 100);
-	  }, 34000);
-	  video.addEventListener('ended', function (e) {
-	    setTimeout(function () {
-	      $img.show();
-	      $video.remove();
-	      // window.location.href = "http://woman.disoul.me";
-	      document.getElementById('btn').style.opacity = 1;
-	    }, 750);
-	  });
-	  video.addEventListener('timeupdate', function (e) {
-	    if (e.target.currentTime > 40) {
-	      // window.location.href = "http://woman.disoul.me";
-	      $img.show();
-	      $video.remove();
-	    }
-	  });
-	  scaleToFill(video);
-	  video.play();
-	  audio.play();
+	    document.body.style.display = 'block';
+	    var video = document.getElementById('video');
+	    var audio = document.getElementById('audio');
+	    var $video = $('#video');
+	    var w = width / 640.0;
+	    var h = height / 1045.0;
+	    var $img = $('.img');
+	    // video.play();
+	    // setTimeout(function() {
+	    //     setInterval(function() {
+	    //         if (audio.volume > 0.06)
+	    //             audio.volume -= 0.02;
+	    //     }, 100);
+	    // }, 46000);
+	    video.addEventListener('ended', function (e) {
+	        setTimeout(function () {
+	            $img.show();
+	            $video.remove();
+	            // window.location.href = "http://woman.disoul.me";
+	            document.getElementById('btn').style.opacity = 1;
+	        }, 750);
+	    });
+	    video.addEventListener('timeupdate', function (e) {
+	        if (e.target.currentTime > 51) {
+	            // window.location.href = "http://woman.disoul.me";
+	            $img.show();
+	            $video.remove();
+	        }
+	    });
+	    scaleToFill(video);
+	    audio.play();
+	    video.play();
 	};
 
 	function check() {
-	  if (video.currentTime >= 41) {
-	    // window.location.href = "http://woman.disoul.me";
-	  }
-	  requestAnimationFrame(check);
+	    if (video.currentTime >= 52) {
+	        // window.location.href = "http://woman.disoul.me";
+	    }
+	    requestAnimationFrame(check);
 	}
 
 	function scaleToFill(videoTag) {
-	  var $video = $(videoTag),
-	      videoRatio = videoTag.videoWidth / videoTag.videoHeight,
-	      tagRatio = $video.width() / $video.height();
-	  if (videoRatio < tagRatio) {
-	    $video.css('-webkit-transform', 'scaleX(' + tagRatio / videoRatio + ')');
-	  } else if (tagRatio < videoRatio) {
-	    $video.css('-webkit-transform', 'scaleY(' + videoRatio / tagRatio + ')');
-	  }
+	    var $video = $(videoTag),
+	        videoRatio = videoTag.videoWidth / videoTag.videoHeight,
+	        tagRatio = $video.width() / $video.height();
+	    if (videoRatio < tagRatio) {
+	        $video.css('-webkit-transform', 'scaleX(' + tagRatio / videoRatio + ')');
+	    } else if (tagRatio < videoRatio) {
+	        $video.css('-webkit-transform', 'scaleY(' + videoRatio / tagRatio + ')');
+	    }
 	}
 	requestAnimationFrame(check);
 
@@ -10348,8 +10349,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/.0.25.0@css-loader/index.js!./../node_modules/.0.13.0@postcss-loader/index.js!./index.css", function() {
-				var newContent = require("!!./../node_modules/.0.25.0@css-loader/index.js!./../node_modules/.0.13.0@postcss-loader/index.js!./index.css");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/postcss-loader/index.js!./index.css", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/postcss-loader/index.js!./index.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
