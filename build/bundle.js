@@ -55,7 +55,7 @@
 	var $video = $('#video');
 	var ua = navigator.userAgent.toLowerCase();
 	if (/iphone|ipad|ipod/.test(ua)) {} else {
-	  $video.attr('src', '../assets/source4.mp4');
+	  $video.attr('src', './assets/source4.mp4');
 	}
 	window.onload = function () {
 	  document.body.style.display = 'block';
