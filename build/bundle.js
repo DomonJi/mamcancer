@@ -65,6 +65,7 @@
 	    if (/iphone|ipad|ipod/.test(ua)) {
 	        $video.attr('src', '../assets/source3.mp4');
 	        audio.play();
+	        video.play();
 	    } else {}
 	    // video.play();
 	    // setTimeout(function() {
@@ -92,7 +93,9 @@
 	        }
 	    });
 	    scaleToFill(video);
-	    video.play();
+	    if (/iphone|ipad|ipod/.test(ua)) {} else {
+	        video.play();
+	    }
 	};
 
 	function check() {
