@@ -43,13 +43,17 @@ body {
 
 .logo__logos {
     position: absolute;
-    top: 10px;
-    left: calc(50% - 156px);
+    top: 0.23rem;
+    left: calc(50% - 1.8rem);
+}
+
+.logo__logos img {
+    width: 4rem;
 }
 
 .logo__music {
     position: absolute;
-    top: 10px;
+    top: 0.23rem;
     right: 30px;
     cursor: pointer;
     img {
@@ -341,26 +345,15 @@ body {
     width: 9rem;
     margin: auto;
     display: flex;
-    /*justify-content: space-around;*/
+    justify-content: space-around;
     margin-top: 20px;
-    #button1 {
+    button {
         font-size: 0.55rem;
         color: white;
         background-image: url('../assets/button_bg.png');
         background-size: 100% 100%;
         border: none;
         padding: 10px 35px;
-        margin-left: auto;
-    }
-    #button2 {
-        font-size: 0.55rem;
-        color: white;
-        background-image: url('../assets/button_bg.png');
-        background-size: 100% 100%;
-        border: none;
-        padding: 10px 35px;
-        margin-left: 5%;
-        margin-right: auto;
     }
 }
 
