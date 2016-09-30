@@ -52,6 +52,8 @@
 	var $ = __webpack_require__(1);
 	// require('./rem.js');
 	__webpack_require__(2);
+	var $video = $('#video');
+	var ua = navigator.userAgent.toLowerCase();
 	if (/iphone|ipad|ipod/.test(ua)) {
 	    $video.attr('src', '../assets/source3.mp4');
 	} else {}
@@ -63,7 +65,6 @@
 	    var w = width / 640.0;
 	    var h = height / 1045.0;
 	    var $img = $('.img');
-	    var ua = navigator.userAgent.toLowerCase();
 	    if (/iphone|ipad|ipod/.test(ua)) {
 	        $video.attr('src', '../assets/source3.mp4');
 	        audio.play();
